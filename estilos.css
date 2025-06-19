@@ -1,0 +1,32 @@
+
+:root {
+  --rojo-f1: #cc0000;
+  --gris-fondo: #f5f5f5;
+  --fuente-principal: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--gris-fondo);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: var(--rojo-f1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
