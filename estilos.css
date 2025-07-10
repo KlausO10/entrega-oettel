@@ -1,32 +1,183 @@
+@charset "UTF-8";
 
-:root {
-  --rojo-f1: #cc0000;
-  --gris-fondo: #f5f5f5;
-  --fuente-principal: 'Arial', sans-serif;
-}
-
+/* Estilos generales */
 body {
-  font-family: var(--fuente-principal);
-  background-color: var(--gris-fondo);
-  color: #222;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
-h1, h2 {
-  color: var(--rojo-f1);
+/* Header */
+header.bg-danger {
+  background-color: #cc0000 !important;
 }
 
-img {
-  max-width: 100%;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+header nav ul.nav li.nav-item a.nav-link {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+header nav ul.nav li.nav-item a.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+  padding: 2rem 0;
+}
+
+main .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Estilos para secciones (circuitos y escuderías) */
+main .row section {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+main .row section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main .row section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+main .row section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Estilos específicos para imágenes de circuitos */
+.circuito-body img {
+  width: 100%;
   height: auto;
-  display: block;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
+
+.circuito-info p {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos específicos para pilotos */
+.pilotos .row section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Colores de fondo para escuderías y circuitos */
+.ferrari { background-color: #dc0000; }
+.redbull { background-color: #1e41ff; }
+.mercedes { background-color: #00d2be; }
+.mclaren { background-color: #ff8700; }
+.astonmartin { background-color: #00665e; }
+.alpine { background-color: #0090ff; }
+.sauber { background: linear-gradient(45deg, #00ff99, #1c1c1c); }
+.williams { background-color: #005aff; }
+.vcarb { background-color: #2b2d42; }
+.haas { background-color: #b6babd; }
+
+.bahrain { background-color: #8d590a; }
+.jeddah { background-color: #245c36; }
+.australia { background-color: #1a3e72; }
+.suzuka { background-color: #e10600; }
+.shanghai { background-color: #e32119; }
+.miami { background-color: #00a9e0; }
+.imola { background-color: #006341; }
+.monaco { background-color: #d80621; }
+.canada { background-color: #d52b1e; }
+.espana { background-color: #ffc72c; }
+.austria { background-color: #2d2d2d; }
+.silverstone { background-color: #012169; }
+.hungria { background-color: #436f4d; }
+.spa { background-color: #fae042; }
+.zandvoort { background-color: #ff7f00; }
+.monza { background-color: #006341; }
+.baku { background-color: #00a9e0; }
+.singapur { background-color: #ed1c24; }
+.cota { background-color: #bf0d3e; }
+.mexico { background-color: #006341; }
+.interlagos { background-color: #fcd116; }
+.vegas { background-color: #000000; }
+.qatar { background-color: #8a1538; }
+.abudhabi { background-color: #2d2d2d; }
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 0.5rem 0;
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main .row {
+    flex-direction: column;
+  }
+  
+  .circuito-body img, .pilotos .row section img {
+    max-height: 180px;
+    height: auto;
+  }
+  
+  main .row section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .circuito-body img, .pilotos .row section img {
+    max-height: 160px;
+  }
+  
+  main .row section h2 {
+    font-size: 1.3rem;
   }
 }

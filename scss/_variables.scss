@@ -1,0 +1,36 @@
+// Colores generales
+$color-principal: #cc0000;   // rojo Ferrari o rojo fuerte (coincide con .pilotos h2)
+$color-secundario: #ffd500;  // amarillo (como en escuderías)
+$color-blanco: #ffffff;
+$color-texto: #333333;       // texto oscuro estándar
+
+// Colores escuderías (para uso en SCSS)
+$color-ferrari: #dc0000;
+$color-redbull: #1e41ff;
+$color-mercedes: #00d2be;
+$color-mclaren: #ff8700;
+$color-astonmartin: #00665e;
+$color-alpine: #0090ff;
+$color-sauber-start: #00ff99;
+$color-sauber-end: #1c1c1c;
+$color-williams: #005aff;
+$color-vcarb: #2b2d42;
+$color-haas: #b6babd;
+
+// Tipografía
+$font-family-base: 'Arial, sans-serif';
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.6rem;
+
+// Espaciados
+$espaciado-sm: 0.5rem;
+$espaciado-md: 1rem;
+$espaciado-lg: 2rem;
+
+// Bordes
+$borde-radius-sm: 5px;
+$borde-radius-md: 8px;
+
+// Sombras
+$sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);

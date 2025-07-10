@@ -1,0 +1,120 @@
+// Estilos para escuderias.html
+
+header {
+  &.bg-danger {
+    background-color: $color-principal !important;
+  }
+
+  h1 {
+    font-size: 2.5rem; // Podés cambiar a $font-size-xl si querés más consistencia
+    margin-bottom: $espaciado-sm;
+  }
+
+  nav {
+    ul.nav {
+      li.nav-item {
+        a.nav-link {
+          color: $color-blanco;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding: $espaciado-lg 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $espaciado-md;
+
+    section {
+      background-color: $color-secundario;
+      padding: $espaciado-md;
+      border-radius: $borde-radius-md;
+      box-shadow: $sombra-suave;
+
+      h2 {
+        font-size: 1.6rem; // Podés cambiar a $font-size-xl para más consistencia
+        color: $color-principal;
+        margin-bottom: $espaciado-sm;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $borde-radius-sm;
+        margin-bottom: $espaciado-sm;
+      }
+
+      p {
+        color: $color-texto;
+        font-size: 1rem; // Podés cambiar a $font-size-base si querés
+      }
+    }
+  }
+
+  // Estilos individuales por escudería (sobrescriben el fondo y color)
+  .ferrari {
+    background-color: $color-ferrari;
+    color: $color-blanco;
+  }
+
+  .redbull {
+    background-color: $color-redbull;
+    color: $color-blanco;
+  }
+
+  .mercedes {
+    background-color: $color-mercedes;
+    color: #000;
+  }
+
+  .mclaren {
+    background-color: $color-mclaren;
+    color: #000;
+  }
+
+  .astonmartin {
+    background-color: $color-astonmartin;
+    color: $color-blanco;
+  }
+
+  .alpine {
+    background-color: $color-alpine;
+    color: $color-blanco;
+  }
+
+  .sauber {
+    background: linear-gradient(45deg, $color-sauber-start, $color-sauber-end);
+    color: $color-blanco;
+  }
+
+  .williams {
+    background-color: $color-williams;
+    color: $color-blanco;
+  }
+
+  .vcarb {
+    background-color: $color-vcarb;
+    color: $color-blanco;
+  }
+
+  .haas {
+    background-color: $color-haas;
+    color: #000;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: $color-blanco;
+  padding: $espaciado-md;
+  text-align: center;
+  margin-top: $espaciado-lg;
+}
