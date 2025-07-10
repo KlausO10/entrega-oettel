@@ -1,0 +1,30 @@
+.pilotos .grid-pilotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  overflow: hidden; /* evita que algo se salga */
+}
+
+.pilotos .grid-pilotos .piloto {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.pilotos .grid-pilotos .piloto:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
+
+.pilotos .grid-pilotos .piloto img {
+  width: 100%;         /* Ancho 100% del contenedor .piloto */
+  height: 180px;       /* Altura fija para todas las imágenes */
+  object-fit: cover;   /* Recorta para ajustar sin deformar */
+  display: block;      /* Quita espacios debajo */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  max-width: 100%;     /* Nunca superar el ancho del contenedor */
+}
